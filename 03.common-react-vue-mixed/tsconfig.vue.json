@@ -1,0 +1,14 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+
+  // 戦略はtsconfig.react.json参照
+  // なおデフォルトではグロブパターンは.ts, .tsxのため明示的に.vueを指定する
+  // tscでは.vueは無視されるが、vue-tscで使用される
+  "include": ["src/**/*", "src/**/*.vue"],
+  "exclude": ["src/react/**/*"],
+
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "dist/vue"
+  }
+}

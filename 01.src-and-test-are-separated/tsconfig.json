@@ -6,8 +6,11 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "moduleResolution": "node16",
+    "outDir": "dist",
 
     // 検証のため@types/jestの読み込みを無効にする
     "types": []
-  }
+  },
+  // デフォルトでグロブパターンは.ts, .tsxを読み込む
+  "include": ["src/**/*"]
 }

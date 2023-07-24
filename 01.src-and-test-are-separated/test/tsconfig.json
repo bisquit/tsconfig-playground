@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": ["jest"]
+  },
+  // ../tsconfig.jsonでテストファイルを除外しているためincludeを書き換える必要がある
+  // 他の方法として①extendsしない、あるいは②tsconfig.base.jsonのように継承用configに分けるといった戦略も可能
+  "include": ["./**/*"]
+}

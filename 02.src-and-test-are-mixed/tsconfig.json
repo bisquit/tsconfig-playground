@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node16",
+    "outDir": "dist",
+
+    // 検証のため@types/jestの読み込みを無効にする
+    "types": []
+  },
+  // tscでもこのconfigを利用するためにテストファイルをexcludeしているが、結果tsconfig.test.jsonでexclude: []で上書きする必要が生じる
+  // ゆえにtscコンパイル用のtsconfig.app.json的なのを作って上げたほうが余計な上書きを回避できる
+  "include": ["src/**/*"],
+  "exclude": ["src/**/*.test.ts"],
+  "references": [
+    {
+      "path": "tsconfig.test.json"
+    }
+  ]
+}
